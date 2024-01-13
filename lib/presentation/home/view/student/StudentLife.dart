@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../resources/routes_manager.dart';
+import '../../../resources/routes_manager.dart';
 
 class StudentLife extends StatefulWidget {
   const StudentLife({super.key});

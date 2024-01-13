@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 
-import '../resources/routes_manager.dart';
+import '../../../resources/routes_manager.dart';
 
 class TeacherView extends StatelessWidget {
   TeacherView({super.key});

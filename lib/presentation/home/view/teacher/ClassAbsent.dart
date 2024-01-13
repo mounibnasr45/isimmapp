@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import '../../domain/studentBD.dart';
-import '../resources/routes_manager.dart';
+import '../../../../domain/studentBD.dart';
+import '../../../resources/routes_manager.dart';
 
 class ClassAbsent extends StatefulWidget {
   const ClassAbsent({super.key});
@@ -21,41 +21,41 @@ class _ClassAbsentState extends State<ClassAbsent> {
     return Scaffold(
       appBar: MyAppBarprofile(),
       body: SingleChildScrollView(
-      child: Column(
-        children: [
-          SizedBox(
-            height: 25,
-          ),
-          Text("A Screen meant for professors !"),
-          Row(
-            children: [
-              Container(
-                  height: 70,
-                  width: 70,
-                  child: Image.asset("assets/images/professorlogo.webp")),
-              SizedBox(
-                width: 10,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Professor: SALAH BEN YOUSSEF"),
-                  Text("TD: ING1_INFO"),
-                ],
-              ),
-              SizedBox(
-                width: 10,
-              ),
-            ],
-          ),
-          StudentTable(),
-          SizedBox(
-            height: 500,
-          ),
-          Image.asset("assets/images/ministere.jpg"),
-        ],
+        child: Column(
+          children: [
+            SizedBox(
+              height: 25,
+            ),
+            Text("A Screen meant for professors !"),
+            Row(
+              children: [
+                Container(
+                    height: 70,
+                    width: 70,
+                    child: Image.asset("assets/images/professorlogo.webp")),
+                SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Professor: SALAH BEN YOUSSEF"),
+                    Text("TD: ING1_INFO"),
+                  ],
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+              ],
+            ),
+            StudentTable(),
+            SizedBox(
+              height: 500,
+            ),
+            Image.asset("assets/images/ministere.jpg"),
+          ],
+        ),
       ),
-    ),
     );
   }
 }
@@ -369,7 +369,8 @@ class MyAppBarprofile extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       leading: IconButton(
         icon: Icon(Icons.arrow_back),
-        onPressed: () => Navigator.pushReplacementNamed(context, Routes.schedule_teach),
+        onPressed: () =>
+            Navigator.pushReplacementNamed(context, Routes.schedule_teach),
       ),
       automaticallyImplyLeading: false,
       title: Text("presence sheet"),

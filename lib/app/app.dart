@@ -24,11 +24,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       onGenerateRoute: RouteGenerator.getRoute,
-      initialRoute: Routes.teachernews,
+      initialRoute: Routes.homeRoute,
       theme: ThemeData(useMaterial3: true).copyWith(
           textTheme: TextTheme(
         bodyLarge: TextStyle(
