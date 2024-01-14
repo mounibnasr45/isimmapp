@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:isimm_app2/domain/module.dart';
 import 'package:isimm_app2/presentation/home/view/HomeView.dart';
 import 'package:isimm_app2/presentation/login/widgets/view/loginView.dart';
-import 'package:isimm_app2/presentation/profile/view/profile.dart';
+import 'package:isimm_app2/presentation/home/view/profile/page/profile.dart';
 import 'package:isimm_app2/presentation/schedule/view/schedule.dart';
-import 'package:isimm_app2/presentation/schedule/widgets/schedule.dart';
 import 'package:isimm_app2/presentation/signup/view/signup_view.dart';
-import 'package:isimm_app2/presentation/studentlife/StudentLife.dart';
-import 'package:isimm_app2/presentation/teacher/ClassAbsent.dart';
-import 'package:isimm_app2/presentation/teacher/schedule.dart';
+import 'package:isimm_app2/presentation/home/view/student/StudentLife.dart';
+import 'package:isimm_app2/presentation/home/view/teacher/ClassAbsent.dart';
+import 'package:isimm_app2/presentation/home/view/teacher/schedule.dart';
 
-import '../../app/app.dart';
-import '../teacher/news/news.dart';
-import '../teacher/teacherview.dart';
 import '../chaptre/view/chaptreview.dart';
+import '../home/view/teacher/news/news.dart';
+import '../home/view/teacher/teacherview.dart';
 
 class Routes {
   static const String signup = "/signup";
   static const String loginRoute = "/login";
   static const String registerRoute = "/register";
-  static const String HomeRoute = "/home";
+  static const String homeRoute = "/home";
   static const String chapterRoute = "/chaptre";
   static const String scheduleRoute = "/schedule";
   static const String classRoute = "/class";
@@ -41,13 +38,13 @@ class RouteGenerator {
       case Routes.loginRoute:
         return MaterialPageRoute(builder: (_) => const Loginview());
       case Routes.teachernews:
-        return MaterialPageRoute(builder: (_) =>  News("yourTeacherIdHere"));
+        return MaterialPageRoute(builder: (_) => News("yourTeacherIdHere"));
       case Routes.classAbsent:
         return MaterialPageRoute(builder: (_) => const ClassAbsent());
       case Routes.profile:
-        return MaterialPageRoute(builder: (_) =>  Profile());
+        return MaterialPageRoute(builder: (_) => Profile());
       case Routes.teachView:
-        return MaterialPageRoute(builder: (_) =>  TeacherView());
+        return MaterialPageRoute(builder: (_) => TeacherView());
       case Routes.student:
         return MaterialPageRoute(builder: (_) => const StudentLife());
       // case Routes.chapterRoute:
@@ -65,7 +62,7 @@ class RouteGenerator {
                 ));
       case Routes.signup:
         return MaterialPageRoute(builder: (_) => const SignUpView());
-      case Routes.HomeRoute:
+      case Routes.homeRoute:
         return MaterialPageRoute(builder: (_) => HomeView());
       // case Routes.classRoute:
       //   return MaterialPageRoute(builder: (_) => const ClassAbsent());

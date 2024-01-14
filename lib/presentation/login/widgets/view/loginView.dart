@@ -216,7 +216,7 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {
         // Your button click logic here
-        Navigator.pushReplacementNamed(context, Routes.HomeRoute);
+        Navigator.pushReplacementNamed(context, Routes.homeRoute);
       },
       child: Text(label),
       style: ButtonStyle(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../../models/seance.dart';
-import '../resources/routes_manager.dart';
+import '../../../../models/seance.dart';
+import '../../../resources/routes_manager.dart';
 
 class Cell extends StatelessWidget {
   Cell({
@@ -148,7 +148,7 @@ class WeekDayView extends StatelessWidget {
           seance currentSeance = seanceList[index];
           return GestureDetector(
             onTap: () {
-               Navigator.pushReplacementNamed(context, Routes.classAbsent);
+              Navigator.pushReplacementNamed(context, Routes.classAbsent);
             },
             child: Card(
               color: taskCardColor,
